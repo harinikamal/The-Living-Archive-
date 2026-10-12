@@ -1,3 +1,4 @@
+ HEAD
 # The Living Archive ✦
 
 > *"Some feelings refuse to stay unwritten."*
@@ -215,3 +216,7 @@ The front-end code is deliberately structured with clear abstractions so that it
 ---
 
 *Curated with care for The Living Archive. Some feelings refuse to stay unwritten.*
+
+# The-Living-Archive-
+A digital literary archive where poems, letters, essays, and stories intertwine through shared emotions, memories, and human experiences. 
+
