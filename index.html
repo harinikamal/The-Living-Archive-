@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The Living Archive is a dark-academia digital literary archive connecting poems, essays, letters, and stories through shared emotions, ideas, and human memories.">
+  <meta name="theme-color" content="#101713">
+  
+  <title>The Living Archive — Some feelings refuse to stay unwritten</title>
+  
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/constellation.css">
+</head>
+<body>
+  <!-- Accessible Skip Link -->
+  <a href="#app" class="skip-link">Skip to main content</a>
+
+  <!-- Literary Masthead -->
+  <header class="site-header" role="banner">
+    <div class="container masthead-inner">
+      <div class="brand">
+        <a href="#/" class="brand-title" aria-label="The Living Archive Home">
+          <span>The Living Archive</span>
+          <span class="star-mark" aria-hidden="true">✦</span>
+        </a>
+        <span class="brand-tagline">Some feelings refuse to stay unwritten</span>
+      </div>
+
+      <nav class="site-nav" aria-label="Primary Archive Navigation">
+        <ul class="nav-list" role="list">
+          <li><a href="#/" class="nav-link active" data-nav="home">Home</a></li>
+          <li><a href="#/archive" class="nav-link" data-nav="archive">Archive</a></li>
+          <li><a href="#/submit" class="nav-link" data-nav="submit">Submit a Piece</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Dynamic Application Outlet -->
+  <main id="app" class="site-main" role="main" tabindex="-1" aria-live="polite">
+    <!-- View content rendered via js/router.js -->
+  </main>
+
+  <!-- Literary Archive Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-top">
+        <div class="footer-colophon">
+          <h2 class="footer-title">The Living Archive</h2>
+          <p class="footer-description">
+            A digital anthology shaped by human resonance rather than algorithms or feeds. Here, poems, letters, essays, and fragments remain in quiet communion across time.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <div>
+            <h3 class="footer-nav-title">Navigation</h3>
+            <ul class="footer-nav-list" role="list">
+              <li><a href="#/" class="footer-nav-link">Reading Rooms & Constellation</a></li>
+              <li><a href="#/archive" class="footer-nav-link">Search Entire Archive</a></li>
+              <li><a href="#/submit" class="footer-nav-link">Submit Your Writing</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>A living sanctuary for the unwritten and the remembered.</p>
+        <p>Built with semantic HTML, vanilla CSS & ES modules.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Application Bootstrap -->
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

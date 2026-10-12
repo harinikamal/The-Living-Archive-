@@ -1,0 +1,106 @@
+/* ==========================================================================
+   THE LIVING ARCHIVE — DESIGN TOKENS
+   Color palette, typography, elevations, and layout constraints.
+   ========================================================================== */
+
+:root {
+  /* --- Primary Literary Palette --- */
+  --color-ink: #101713;             /* Deepest archive canvas background */
+  --color-ink-rgb: 16, 23, 19;
+  --color-forest: #243D2D;          /* Deep forest green for panels & cards */
+  --color-forest-rgb: 36, 61, 45;
+  --color-forest-dark: #182B1F;     /* Inset surfaces, dark dividers */
+  --color-forest-light: #2D4C38;    /* Interactive card hovers, elevated panels */
+  
+  --color-parchment: #E8DFC8;       /* Primary text on dark surfaces & reading background */
+  --color-parchment-rgb: 232, 223, 200;
+  --color-parchment-light: #F4EEDF; /* Illuminated reading paper */
+  --color-parchment-dark: #D4C9AF;  /* Borders on parchment, aged deckle edge */
+  --color-parchment-ink: #1A1F1B;   /* High-contrast ink typography on light parchment */
+
+  --color-moss: #82916A;            /* Secondary accents, fine structural lines */
+  --color-moss-light: #9DAE83;      /* Subtle hover accent */
+  --color-moss-dim: rgba(130, 145, 106, 0.22); /* Constellation grid lines & borders */
+
+  --color-aged-gold: #B69A62;       /* Key accents, active states, illuminated stars */
+  --color-aged-gold-rgb: 182, 154, 98;
+  --color-aged-gold-glow: rgba(182, 154, 98, 0.35);
+  --color-aged-gold-bright: #CEB47A;
+
+  --color-muted: #A8B0A2;           /* Subdued secondary typography */
+  --color-muted-dark: #747D6E;      /* Deeper metadata, quiet timestamps */
+  
+  --color-error: #D97373;           /* Warm terracotta error tone */
+  --color-error-bg: rgba(217, 115, 115, 0.12);
+  --color-success: #88B48F;         /* Muted sage success tone */
+  --color-success-bg: rgba(136, 180, 143, 0.12);
+
+  /* --- Typography --- */
+  --font-serif: 'Cormorant Garamond', Garamond, 'EB Garamond', Georgia, serif;
+  --font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Type Scale */
+  --text-xs: 0.75rem;     /* 12px */
+  --text-sm: 0.875rem;    /* 14px */
+  --text-base: 1rem;      /* 16px */
+  --text-lg: 1.125rem;    /* 18px */
+  --text-xl: 1.3125rem;   /* 21px */
+  --text-2xl: 1.625rem;   /* 26px */
+  --text-3xl: 2.125rem;   /* 34px */
+  --text-4xl: 2.75rem;    /* 44px */
+  --text-display: 3.5rem; /* 56px */
+
+  /* Leading */
+  --leading-tight: 1.15;
+  --leading-snug: 1.35;
+  --leading-normal: 1.6;
+  --leading-relaxed: 1.8;
+  --leading-reading: 1.95; /* Generous breathing room for literature */
+
+  /* Letter Spacing */
+  --tracking-tight: -0.02em;
+  --tracking-normal: 0em;
+  --tracking-wide: 0.06em;
+  --tracking-widest: 0.15em;
+
+  /* --- Spacing Scale --- */
+  --space-1: 0.25rem;   /* 4px */
+  --space-2: 0.5rem;    /* 8px */
+  --space-3: 0.75rem;   /* 12px */
+  --space-4: 1rem;      /* 16px */
+  --space-5: 1.25rem;   /* 20px */
+  --space-6: 1.5rem;    /* 24px */
+  --space-8: 2rem;      /* 32px */
+  --space-10: 2.5rem;   /* 40px */
+  --space-12: 3rem;     /* 48px */
+  --space-16: 4rem;     /* 64px */
+  --space-20: 5rem;     /* 80px */
+  --space-24: 6rem;     /* 96px */
+
+  /* --- Layout & Constraints --- */
+  --max-width-content: 1200px;
+  --max-width-reading: 720px; /* Optimal 60-75 character reading measure */
+  --max-width-narrow: 860px;
+  --site-padding: clamp(1rem, 4vw, 2.5rem);
+
+  /* --- Borders & Radii --- */
+  --radius-sm: 3px;
+  --radius-md: 6px;
+  --radius-lg: 12px;
+  --radius-full: 9999px;
+  
+  --border-fine: 1px solid var(--color-moss-dim);
+  --border-gold: 1px solid var(--color-aged-gold);
+  --border-gold-subtle: 1px solid rgba(182, 154, 98, 0.3);
+
+  /* --- Shadows & Atmospherics --- */
+  --shadow-subtle: 0 4px 16px rgba(0, 0, 0, 0.25);
+  --shadow-elevated: 0 12px 32px rgba(0, 0, 0, 0.35);
+  --shadow-parchment: 0 16px 48px rgba(0, 0, 0, 0.45), 0 2px 8px rgba(0, 0, 0, 0.2);
+  --shadow-glow: 0 0 24px var(--color-aged-gold-glow);
+
+  /* --- Transitions & Timing --- */
+  --transition-fast: 160ms cubic-bezier(0.2, 0.8, 0.4, 1);
+  --transition-normal: 280ms cubic-bezier(0.2, 0.8, 0.4, 1);
+  --transition-slow: 480ms cubic-bezier(0.2, 0.8, 0.4, 1);
+}

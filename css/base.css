@@ -1,0 +1,185 @@
+/* ==========================================================================
+   THE LIVING ARCHIVE — BASE STYLES
+   Reset, typography rules, accessibility, and atmospheric background.
+   ========================================================================== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--color-ink);
+  color: var(--color-parchment);
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  letter-spacing: var(--tracking-normal);
+  overflow-x: hidden;
+  position: relative;
+  
+  /* Subtle atmospheric vignette and grain-like gradient */
+  background-image: 
+    radial-gradient(ellipse at 50% 0%, rgba(36, 61, 45, 0.45) 0%, transparent 70%),
+    radial-gradient(circle at 85% 90%, rgba(36, 61, 45, 0.25) 0%, transparent 50%),
+    linear-gradient(to bottom, var(--color-ink) 0%, #0d1310 100%);
+  background-attachment: fixed;
+}
+
+/* --- Focus States & Accessibility --- */
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-aged-gold);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1.5rem;
+  background: var(--color-aged-gold);
+  color: var(--color-ink);
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  z-index: 9999;
+  text-decoration: none;
+  transition: top var(--transition-fast);
+}
+
+.skip-link:focus {
+  top: 1.5rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* --- Selection --- */
+::selection {
+  background-color: rgba(182, 154, 98, 0.35);
+  color: var(--color-parchment-light);
+}
+
+/* --- Typography Defaults --- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  line-height: var(--leading-tight);
+  color: var(--color-parchment);
+  letter-spacing: var(--tracking-tight);
+}
+
+h1 {
+  font-size: clamp(var(--text-3xl), 5vw, var(--text-display));
+  font-weight: 400;
+}
+
+h2 {
+  font-size: clamp(var(--text-2xl), 3.5vw, var(--text-3xl));
+}
+
+h3 {
+  font-size: clamp(var(--text-xl), 2.5vw, var(--text-2xl));
+}
+
+p {
+  color: var(--color-parchment);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  margin-bottom: var(--space-4);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+
+button {
+  font-family: var(--font-sans);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  font-size: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* --- Custom Scrollbar --- */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-ink);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-forest-light);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-forest);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-moss);
+}
+
+/* --- Utility Classes --- */
+.container {
+  width: 100%;
+  max-width: var(--max-width-content);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--site-padding);
+  padding-right: var(--site-padding);
+}
+
+.container-narrow {
+  width: 100%;
+  max-width: var(--max-width-narrow);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--site-padding);
+  padding-right: var(--site-padding);
+}
+
+/* --- Reduced Motion Compliance --- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
